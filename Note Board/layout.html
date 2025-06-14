@@ -1,0 +1,84 @@
+<style>
+  .note-board {
+    display: grid;
+    grid-template-columns: repeat(2, 280px);
+    grid-template-rows: repeat(2, 185px);
+    gap: 20px;
+    width: 400px; /* 280px * 2 + 20px gap */
+    margin: 20px auto;
+    justify-content: center;
+  }
+
+  .note {
+    width: 280px;
+    min-height: 185px;
+    border: 2px solid #000000;
+    box-shadow: 2px 2px 4px rgba(0,0,0,1);
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 780px;
+    height: 430px; /* Leaving space for the title bar */
+  }
+</style>
+<div class="layout bg-gray-4">
+  <div class="note-board">
+    <div class="note bg-white"> 
+      <div class="col col--start">
+        <div class="row row--center">
+          <img class="image" src="https://www.svgrepo.com/show/238165/push-pin-pin.svg" width=15px; height=20px; />
+        </div>
+        <div class="richtext richtext--center gap--large">
+          <div class="content content--left gap text--left w--[260px]">
+            <p>{{ Spot1 }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="note bg-white"> 
+      <div class="col col--start">
+        <div class="row row--center">
+          <img class="image" src="https://www.svgrepo.com/show/238165/push-pin-pin.svg" width=15px; height=20px; />
+        </div>
+        <div class="richtext richtext--center gap--large">
+          <div class="content content--left gap text--left w--[260px]">
+            <p>{{ Spot2 }}</p>
+          </div>
+        </div>
+      </div>
+    </div>    <div class="note bg-white"> 
+      <div class="col col--start">
+        <div class="row row--center">
+          <img class="image" src="https://www.svgrepo.com/show/238165/push-pin-pin.svg" width=15px; height=20px; />
+        </div>
+        <div class="richtext richtext--center gap--large">
+          <div class="content content--left gap text--left w--[260px]">
+            <p>{{ Spot3 }}</p>
+          </div>
+        </div>
+      </div>
+    </div>    <div class="note bg-white"> 
+      <div class="col col--start">
+        <div class="row row--center">
+          <img class="image" src="https://www.svgrepo.com/show/238165/push-pin-pin.svg" width=15px; height=20px; />
+        </div>
+        <div class="richtext richtext--center gap--large">
+          <div class="content content--left gap text--left w--[260px]">
+            <p>{{ Spot4 }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="title_bar">
+  <img class="image" src="https://www.svgrepo.com/show/206995/post-it-post-it.svg"/>
+  <span class="title">{{trmnl.user.first_name}}'s Note Board</span>
+</div>
+{% assign ignoreme = apple_shortcut_url %}
